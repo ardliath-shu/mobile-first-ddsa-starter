@@ -1,39 +1,47 @@
 /* Desktop Styles */
 
+/* Articles container: single row, larger font */
 .articles {
-  flex-wrap: nowrap;
+  flex-wrap: nowrap; /* Prevent wrapping, show all articles in one row */
   font-size: 1.2rem;
 }
+
+/* Each article: take up 25% width, spacing between */
 .articles > div {
-  flex: 1 1 25%;
+  flex: 1 1 25%; /* Four columns */
   padding: 0;
-  margin: 0 20px;
+  margin: 0 20px; /* Space between articles */
 }
+
+/* Remove left margin for first article */
 .articles > div:first-child {
   margin-left: 0;
 }
+
+/* Remove right margin for last article */
 .articles > div:last-child {
   margin-right: 0;
 }
 
+/* Header and main: center content, max width */
 header {
   max-width: 1280px;
   margin: auto;
 }
-
 main {
   max-width: 1280px;
-  margin: 0 auto 8rem auto;
+  margin: 0 auto 8rem auto; /* Center and add bottom margin */
 }
 
+/* Hide burger menu on desktop */
 .burgerMenuContainer {
   display: none;
 }
 
+/* Navigation: horizontal menu */
 nav ul {
   display: flex;
 }
-
 nav ul li {
   padding: 4px;
   border-bottom: none;
@@ -43,42 +51,34 @@ nav ul li a {
   border: none;
 }
 nav ul li a:hover {
-  border-bottom: 3px solid #fff;
+  border-bottom: 3px solid #fff; /* Underline on hover */
 }
 
+/* Navigation container: visible, spacing */
 nav {
-  height: 80px;
-  flex: 1 1 80%;
-  display: flex;
-  justify-content: flex-end;
-  /* For mobile toggle */
-  overflow: auto;
-}
-
-footer{
-  position:fixed;
-  bottom:0;
-  width:100%;
-}
-
-main {
-  max-width: 1280px;
-  margin: 0 auto 8rem auto;
-}
-
-.headerContainer {
-  padding-top: 20px;
-}
-
-nav{
-  /* For mobile toggle */
   overflow: visible;
-  margin-top:40px;
+  margin-top: 40px;
   height: 80px;
 }
+
+/* Desktop navigation: align right */
 nav.desktop {
   flex: 1 1 auto;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
+
+/* Footer: fixed to bottom, full width */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Header container: extra top padding */
+.headerContainer {
+  padding-top: 20px;
+}
+
+
